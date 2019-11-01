@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<style>
+			html {
+				height: auto;
+				padding-bottom: 2000px;
+				background: black;
+			}
+			img {
+				position: fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<img id="image" src="0001.png">
+	</body>
+	<script>
+		window.addEventListener('scroll', function(e) {
+			document.getElementById('image').setAttribute("src", 
+				Math.round(window.scrollY / (2000 - window.innerHeight) * 47 + 1).toString().padStart(4, '0') + ".png"
+			);
+		});
+	</script>
+</html>
